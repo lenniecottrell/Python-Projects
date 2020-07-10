@@ -11,12 +11,12 @@ class Platform:
 
 #child class
 class Battlestation(Platform):
-    def __init__(self, keyboard):
-        self.keyboard = keyboard
-        self.operatingsys = "Windows"
-        self.server = "Apache"
-        self.database = "MySQL"
-        self.language = "Python"
+    def __init__(keyboard):
+        keyboard = keyboard
+        operatingsys = "Windows"
+        server = "Apache"
+        database = "MySQL"
+        language = "Python"
         super().__init__(operatingsys, server, database, language)
 
     def addStuff(self):
@@ -27,6 +27,7 @@ class Battlestation(Platform):
 if __name__ == "__main__":
     LampStack = Platform("Linux", "Apache", "MySQL", "PHP")
     print(LampStack.describeClass())
-    myBattle = Battlestation("tenkeyless")
+    myBattle = Battlestation()
     print(myBattle.describeClass())
+    print(myBattle.addStuff())
 
