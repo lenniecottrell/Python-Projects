@@ -22,10 +22,12 @@ class ParentWindow(Frame):
         self.master = master
         self.master.minsize(500,300) #(height, Width)
         self.master.maxsize(500,300)
+        
         # This center_window method will center our app on the user's screen
         LRCphonebook_func.center_window(self,500,300)
         self.master.title("The Tkinter Phonebook Demo")
         self.master.configure(bg='#F0F0F0')
+        
         # This protocol method is a tkinter built-in method to catch if
         # the user clicks the upper corner, 'X' on Windows OS
         self.master.protocol('WM_DELETE_WINDOW', lambda: LRCphonebook_func.ask_quit(self))
