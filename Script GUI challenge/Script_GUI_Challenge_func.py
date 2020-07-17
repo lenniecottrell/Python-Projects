@@ -34,11 +34,8 @@ def copyFiles(self):
         print(now)
         last24 = int(now) - 68400
         last24_ezformat = time.ctime(last24)
-        #Since24HoursAgo = int(modTime) - 86400 #subtracts one day from time the script is run
-        #Since24HoursAgo_ezformat = time.ctime(Since24HoursAgo) #changes the 24 hrs ago to an easy format
-        #print(Since24HoursAgo) #prints the time from 24 hrs ago
-        #print(Since24HoursAgo_ezformat) #prints the easy format from 24 hrs ago, for me to check that it works
-        
+        print(last24_ezformat)
+
         if int(modTime) > int(last24):
             #copy the files represented by 'i' to the destination
             shutil.copyfile(getSrcPath, getDstPath)
